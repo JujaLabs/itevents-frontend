@@ -1,0 +1,59 @@
+/* app css stylesheet */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #F5F9FA;
+}
+
+.left-bar {
+  position: fixed;
+  width: 248px;
+  height: 100%;
+  float: left;
+  background: #95a5a6;
+  box-shadow: 0 0 2px rgba(133, 133, 133, 0.5);
+}
+
+.left-bar .head {
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  font-size: 30px;
+  background: #7f8c8d;
+  border-bottom-right-radius: 2px;
+}
+
+.left-bar .head p {
+  font-family: "Droid Sans Hebrew";
+  color: #ecf0f1;
+  padding-top:12px;
+}
+
+.shell {
+  margin-left: 248px;
+  width: auto;
+  background: #ecf0f1;
+}
+
+.shell .head {
+  width: 100%;
+  height: 70px;
+  background: #95a5a6;
+  box-shadow: 0 0 2px rgba(133, 133, 133, 0.5);
+
+}
+
+.shell .card {
+  width: 324px;
+  height: 260px;
+  background-color: #F5F9FA;
+  display: inline-flex;
+  margin: 25px;
+  box-shadow: 0 0 2px rgba(133, 133, 133, 0.5);
+}
+
+
+

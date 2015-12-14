@@ -1,0 +1,12 @@
+<section>
+    <div class="left-bar">
+        <div class="head"><p>IT Events</p></div>
+    </div>
+    <div class="shell">
+        <div class="head">
+            <input type="text" ng-model="query">
+        </div>
+        <div class="card" ng-repeat="event in events | filter:query">{{ event | json:spacing}}
+        </div>
+    </div>
+</section>

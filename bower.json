@@ -1,0 +1,15 @@
+{
+  "name": "it-events-bootstrap",
+  "description": "front end from ItEvents",
+  "version": "0.0.0",
+  "homepage": "https://github.com/JuniorsJava/itevents-bootstrap",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-resource": "^1.3.0",
+    "html5-boilerplate": "~5.2.0"
+  }
+}
