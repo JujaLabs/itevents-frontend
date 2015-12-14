@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    function LoginController($scope,$location){
+    function LoginController($scope, $location){
         $location.path('/home')
     }
 
