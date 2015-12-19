@@ -5,7 +5,7 @@
         var events = [];
         var service = {};
         service.loadEvents = function(){
-            var promise = $http.get('/data/events.json');
+            var promise = $http.get('event/events.json');
             promise.success(function(data){
                 events = data;
             });

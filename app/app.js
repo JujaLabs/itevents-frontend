@@ -1,6 +1,5 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
 angular.module('itEventsApp', [
     'ngRoute',
     'ngResource'
@@ -13,11 +12,11 @@ angular.module('itEventsApp', [
 
     $routeProvider
         .when('/login', {
-            templateUrl: 'views/login.html',
+            templateUrl: 'login/login.html',
             controller: 'LoginController'
         })
         .when('/home', {
-            templateUrl: 'views/home.html',
+            templateUrl: 'home/home.html',
             controller: 'HomeController'
         })
         .otherwise({
