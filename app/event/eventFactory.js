@@ -20,6 +20,6 @@
     EventFactory.$inject = ['$resource', '$http'];
 
     angular
-        .module('itEventsApp')
+        .module('appEvent')
         .factory('eventFactory', EventFactory);
 })();

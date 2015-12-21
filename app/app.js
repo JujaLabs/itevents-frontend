@@ -2,7 +2,6 @@
 
 angular.module('itEventsApp', [
     'ngRoute',
-    'ngResource',
     'appLogin',
     'appHome'
 ]).config(function ($routeProvider, $locationProvider) {
