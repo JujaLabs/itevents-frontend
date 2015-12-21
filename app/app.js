@@ -2,13 +2,9 @@
 
 angular.module('itEventsApp', [
     'ngRoute',
-    'ngResource'
+    'ngResource',
+    'appLogin'
 ]).config(function ($routeProvider, $locationProvider) {
-
-    //$locationProvider.html5Mode({
-    //    enabled: true,
-    //    requireBase: false
-    //});
 
     $routeProvider
         .when('/login', {

@@ -2,12 +2,14 @@
     'use strict';
 
     function LoginController($scope, $location){
-        $location.path('/home')
+        $scope.loggedIn = function(){
+            $location.path('/home')
+        };
     }
 
     LoginController.$inject = ['$scope','$location'];
 
     angular
-      .module('itEventsApp')
+      .module('appLogin')
       .controller('LoginController', LoginController);
 })();
