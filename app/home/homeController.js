@@ -10,6 +10,6 @@
     HomeController.$inject = ['$scope','eventFactory'];
 
     angular
-        .module('itEventsApp')
+        .module('appHome')
         .controller('HomeController', HomeController);
 })();

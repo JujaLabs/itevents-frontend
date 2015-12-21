@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('itEventsApp', [
+angular.module('app', [
     'ngRoute',
     'appLogin',
     'appHome'
