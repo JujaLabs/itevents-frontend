@@ -7,9 +7,7 @@
         });
     }
 
-    HomeController.$inject = ['$scope','eventFactory'];
-
     angular
         .module('appHome')
-        .controller('HomeController', HomeController);
+        .controller('HomeController', ['$scope','eventFactory',HomeController]);
 })();

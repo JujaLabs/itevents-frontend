@@ -5,11 +5,11 @@
         $scope.loggedIn = function(){
             $location.path('/home')
         };
-    }
 
-    LoginController.$inject = ['$scope','$location'];
+        $scope.userName = "guest";
+    }
 
     angular
       .module('appLogin')
-      .controller('LoginController', LoginController);
+      .controller('LoginController', ['$scope','$location', LoginController]);
 })();
