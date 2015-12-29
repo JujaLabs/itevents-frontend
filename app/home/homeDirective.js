@@ -12,7 +12,8 @@
     angular.module('appHome')
         .directive('appShell', function(){
             return {
-                templateUrl: 'event/eventCard.html'
+                templateUrl: 'event/eventCard.html',
+                controller: 'EventController'
             };
         });
 

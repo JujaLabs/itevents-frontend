@@ -1,13 +1,11 @@
 (function() {
     'use strict';
 
-    function HomeController($scope, eventFactory){
-        eventFactory.loadEvents().success(function() {
-            $scope.events = eventFactory.getEvents();
-        });
+    function HomeController($scope){
+
     }
 
     angular
         .module('appHome')
-        .controller('HomeController', ['$scope','eventFactory',HomeController]);
+        .controller('HomeController', ['$scope',HomeController]);
 })();
