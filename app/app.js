@@ -4,7 +4,7 @@ angular.module('app', [
     'ngRoute',
     'appLogin',
     'appHome'
-]).config(function ($routeProvider, $locationProvider) {
+]).config(function ($routeProvider, $httpProvider) {
 
     $routeProvider
         .when('/login', {
@@ -18,4 +18,8 @@ angular.module('app', [
         .otherwise({
             redirectTo: '/home'
         });
+
+    //$httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
+    $httpProvider.defaults.withCredentials = true;
+
 });

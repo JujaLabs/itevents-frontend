@@ -4,17 +4,19 @@
         <div>
             <label>Email: </label>
             <br>
-            <input type="email">
+            <input type="email" ng-model="login">
         </div>
         <br>
         <div>
             <label>Password: </label>
             <br>
-            <input type="password">
+            <input type="password" ng-model="pass">
         </div>
         <br>
         <div>
             <button ng-click="loggedIn()" style='float:right'>Login</button>
+            <button ng-click="register()" style='float:right'>register</button>
+            <button ng-click="logout()" style='float:right'>logout</button>
         </div>
     </div>
 </section>
