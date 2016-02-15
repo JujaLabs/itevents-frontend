@@ -8,5 +8,5 @@
     }
 
     angular.module('appEvent')
-        .controller('EventController',['$scope', 'eventFactory', eventController]);
+        .controller('EventController',['$scope', 'EventFactory', eventController]);
 })();

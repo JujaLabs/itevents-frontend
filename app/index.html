@@ -7,11 +7,13 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body ng-app="app">
 
   <div ng-view></div>
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -26,5 +28,8 @@
   <script src="event/event.js"></script>
   <script src="event/eventFactory.js"></script>
   <script src="event/eventController.js"></script>
+  <script src="event-maps/maps.js"></script>
+  <script src="event-maps/mapsService.js"></script>
+  <script src="event-maps/mapsController.js"></script>
 </body>
 </html>

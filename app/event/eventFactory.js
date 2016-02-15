@@ -21,5 +21,5 @@
 
     angular
         .module('appEvent')
-        .factory('eventFactory', EventFactory);
+        .factory('EventFactory', EventFactory);
 })();

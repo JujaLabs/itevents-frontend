@@ -3,7 +3,8 @@
 angular.module('app', [
     'ngRoute',
     'appLogin',
-    'appHome'
+    'appHome',
+    'appMaps'
 ]).config(function ($routeProvider, $locationProvider) {
 
     $routeProvider
@@ -14,6 +15,10 @@ angular.module('app', [
         .when('/home', {
             templateUrl: 'home/home.html',
             controller: 'HomeController'
+        })
+        .when('/maps', {
+            templateUrl: 'event-maps/maps.html',
+            controller: 'MapsController'
         })
         .otherwise({
             redirectTo: '/home'
