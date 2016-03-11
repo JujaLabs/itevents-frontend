@@ -1,3 +1,6 @@
 .idea/
 app/bower_components/
 node_modules/
+*.psd
+*.ttc
+it-events-main.png
