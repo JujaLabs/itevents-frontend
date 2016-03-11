@@ -259,14 +259,14 @@ input[type=checkbox]:checked + label:before {
     border-width: 43px 21.5px 0 21.5px;
 }
 .main{
-    width: 87.8%;
+    width: 86.9375%;
     float: left;
     height: 100%;
-    margin: 0 6.2%;
+    margin: 0 6.4375%;
     border-right: 4px solid  #71b36b;
 }
 .main_wrapper{
-    width: 80.5%;
+    width: 82%;
 }
 .main_wrapper .date{
     margin-top: 140px;
@@ -297,7 +297,7 @@ input[type=checkbox]:checked + label:before {
 }
 .subscriber{
     float: right;
-    width: 34%;
+    width: 33.5%;%;
     height: 170px;
     background-color: #f7941d;
     text-align: center;
@@ -384,7 +384,7 @@ article a{
 .load_more{
     float: right;
     background-color: #f7941d;
-    width: 34%;
+    width: 33.5%;%;
     height: 101px;
     text-align: center;
     font: 14pt AvenirNextRegular;
@@ -428,7 +428,7 @@ footer a:last-child{
 @media only screen and (max-width: 1216px) {
     .wrapper {
         max-width: 760px;
-        min-width: 0px;
+        min-width: 580px;
     }
     .map{
         display: none;
