@@ -33,6 +33,14 @@ a {
     max-width: 1600px;
     min-width: 1215px;
 }
+.wrapper:after {
+    content: "&nbsp;";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+}
 
 
 header{
@@ -339,17 +347,18 @@ article{
     float: left;
     width: 100%;
     width: -webkit-calc(100% - 1px);
-    width: calc(100% - 1px);
+    width: calc(100% - 2px);
     height: 140px;
     border: 1px solid #242424;
     font: 14pt AvenirNextRegular;
-    padding-right: 16px;
+    /*padding-right: 16px;*/
 }
 article a{
     color: #333333;
     font-size: 18pt;
 }
 .articles{
+    width: 100%;
     float: left;
     margin-right: 1px;
 }
@@ -442,6 +451,9 @@ footer a:last-child{
         width: 50%;
         float: left;
     }
+    .login{
+        float: right;
+    }
     .main {
         width: 100%;
         margin: 0;
@@ -449,9 +461,18 @@ footer a:last-child{
     }
     .main_wrapper{
         width: 100%;
+        min-width: 580px;
     }
     .load_more, .subscriber{
-        width: 380px;
+        width: 50%;
+    }
+    .small_logo{
+        width: 50%;
+        margin: 0;
+    }
+    .footer_left{
+        padding: 130px 0 0 2%;
+        width: 48%;
     }
 }
 
