@@ -28,6 +28,13 @@ a {
     font-family: 'ChampagneLimousines';
     src: url(../fonts/Champagne&Limousines.ttf);
 }
+
+@font-face {
+    font-family: 'AvenirNextMedium';
+    src: url('../fonts/AvenirNext-Medium.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/AvenirNext-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/AvenirNext-Medium.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
 .wrapper{
     margin: 0 auto;
     max-width: 1600px;
@@ -154,7 +161,7 @@ header{
 }
 .datepicker-td a{
     color: #7cc576;
-    font-family: AvenirNextRegular;
+    font-family: AvenirNextRegular, sans-serif;
 }
 .not_this_month a{
     color: #929292;
@@ -190,7 +197,7 @@ header{
 .new-select-style select {
     border-radius: 0;
     background: transparent;
-    padding-left: 45px;
+    padding-left: 23.6385508%;
     padding-top: 10px;
     border: 0;
     -webkit-appearance: none;
@@ -241,10 +248,26 @@ input[type=checkbox]:checked + label:before {
     font: 12pt ChampagneLimousines;
 }
 .login{
+    position: relative;
     float: right;
     background: center url('../img/small_logo.png') no-repeat;
     width: 23%;
     height: 373px;
+    font-family: 'AvenirNextMedium', sans-serif;
+    font-size: 12pt;
+}
+.login a{
+    color: #ffffff;
+}
+.login p{
+    position: absolute;
+    width: 565px;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    margin-left: -101px;
+    margin-top: -75px;
+    color: #ffffff;
 }
 
 .map{
@@ -424,14 +447,14 @@ footer a:last-child{
     background: center url('../img/small_logo.png') no-repeat;
 }
 
-@media only screen and (max-width: 1216px) {
+@media only screen and (max-width: 760px) {
     .wrapper {
         max-width: 760px;
         min-width: 580px;
     }
-    .map{
-        display: none;
-    }
+    /*.map{*/
+        /*display: none;*/
+    /*}*/
     header{
         height: 1120px;
     }
@@ -473,5 +496,86 @@ footer a:last-child{
         padding: 130px 0 0 2%;
         width: 48%;
     }
+}
+@media only screen and (max-width: 1215px) and (min-width: 870px) {
+    .wrapper {
+        max-width: 1215px;
+        min-width: 871px;
+    }
+    /*.map{*/
+        /*display: none;*/
+    /*}*/
+    header{
+        height: 840px;
+    }
+    .calendar{
+        height: 650px;
+        width: 32%;
+    }
+    .logo{
+        width: 68%;
+        height: 650px;
+    }
+    .calendar .month{
+        float: left;
+    }
+    .calendar .today, .calendar .month{
+        width: 100%;
+        height: 325px;
+    }
+    .calendar .today > div{
+        margin-top: 10px;
+    }
+    .current_date > div{
+        font-size: 160pt;
+    }
+    .current_date{
+        height: 282px;
+    }
+    .datepicker{
+        margin-top: 25px;
+    }
+    .search{
+        float: left;
+        width: 68%;
+        height: 190px;
+    }
+    .login{
+        width: 32%;
+        height: 190px;
+        background-color: #71b36b;
+    }
+    .form-search{
+        width: 95%;
+    }
+    .new-select-style{
+        display: inline-block;
+        width: 24%;
+    }
+    .search .button{
+        display: block;
+        width: 24%;
+        margin: 0 38%;
+    }
+    .checkbox{
+        margin-left: 40%;
+    }
+    .main_wrapper{
+        width: 100%;
+        min-width: 870px;
+    }
+    .main {
+        width: 90%;
+        margin: 0 5%;
+        border: 0;
+    }
+    .subscriber, .load_more{
+        width: 30%;
+    }
+    .small_logo{
+        margin-right: 5%;
+        width: 27%;
+    }
+
 }
 
