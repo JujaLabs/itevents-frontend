@@ -74,6 +74,7 @@ header{
 .main_logo img{
     display: block;
     float: left;
+
 }
 .main_logo img:last-child{
     float: right;
@@ -497,7 +498,7 @@ footer a:last-child{
         width: 48%;
     }
 }
-@media only screen and (max-width: 1215px) and (min-width: 870px) {
+@media only screen and (max-width: 1215px) and (min-width: 761px) {
     .wrapper {
         max-width: 1215px;
         min-width: 871px;
@@ -576,6 +577,8 @@ footer a:last-child{
         margin-right: 5%;
         width: 27%;
     }
+}
+@media only screen and (max-width: 870px) and (min-width: 761px) {
 
 }
 
