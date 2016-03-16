@@ -292,10 +292,14 @@ input[type=checkbox]:checked + label:before {
 .main_wrapper{
     width: 82%;
 }
+/*.hidden-calendar{*/
+    /*display: none;*/
+/*}*/
 .main_wrapper .date{
     margin-top: 140px;
     font: 16pt AvenirNextRegular;
     line-height: 16pt;
+    float: left;
 }
 .main_wrapper .date span{
     margin: 0 12px 0 12px;
@@ -315,9 +319,6 @@ input[type=checkbox]:checked + label:before {
 .prev{
     border-width: 10.5px 10px 10.5px 0;
     border-color: transparent #71b36b transparent transparent;
-}
-.date{
-    float: left;
 }
 .subscriber{
     float: right;
@@ -619,8 +620,80 @@ footer a:last-child{
 }
 /*For mobiles*/
 @media only screen and (max-width: 400px){
-    .map, .logo, .calendar, .search{
+    .map, .logo, .today, .search{
         display: none;
+    }
+    /*.calendar, .month{*/
+        /*height: 0;*/
+    /*}*/
+    header, .main, footer{
+        width: 400px;
+    }
+    .wrapper{
+        min-width: 0px;
+    }
+    header{
+        height: 140px;
+    }
+    .login{
+        height: 100%;
+    }
+    .login p{
+        width: 50px;
+        margin-top: -22px;
+        margin-left: -160px;
+    }
+    .main_wrapper{
+        min-width: 0;
+    }
+    article{
+        font-size: 11pt;
+    }
+    .article_time{
+        width: 20%;
+    }
+    article a{
+        font-size: 12pt;
+    }
+
+    footer a:last-child{
+        margin-top: 119px;
+    }
+    .subscriber, .main_wrapper .date, .load_more{
+        width: 100%;
+    }
+    .main_wrapper .date{
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .calendar{
+        position: fixed;
+        top: 18%;
+        left: 50%;
+        margin-left: -500px;
+        width: 90%;
+        height: 292px;
+        z-index: 100;
+    }
+    .hidden-calendar:checked ~ .calendar{
+        margin-left: -169px;
+    }
+    .calendar .month{
+        display: block;
+        width: 100%;
+    }
+    .datepicker{
+        margin: 10px auto;
+    }
+    .test{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+    }
+    #hidden-cal:checked ~ .test{
+        background-color: blue;
     }
 }
 
