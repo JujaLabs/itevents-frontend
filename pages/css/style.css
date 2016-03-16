@@ -617,4 +617,10 @@ footer a:last-child{
         width: 31%;
     }
 }
+/*For mobiles*/
+@media only screen and (max-width: 400px){
+    .map, .logo, .calendar, .search{
+        display: none;
+    }
+}
 
