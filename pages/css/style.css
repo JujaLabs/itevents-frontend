@@ -745,7 +745,7 @@ footer a:last-child{
         left: 5px;
         cursor: pointer;
         transition: left .23s;
-        z-index: 102;
+        z-index: 98;
         width: 20%;
         -webkit-transform: translateZ(0);
         -webkit-backface-visibility: hidden;
