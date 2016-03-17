@@ -95,8 +95,8 @@ header{
 .over_logo .pin{
     margin-left: 480px;
 }
-.hidden-calendar, .close_calendar{
-display: none;
+.hidden-calendar, .close_calendar, .hidden-menu-ticker {
+    display: none;
 }
 .calendar   {
     float: left;
@@ -618,7 +618,7 @@ footer a:last-child{
 }
 /*For mobiles*/
 @media only screen and (max-width: 400px){
-    .map, .logo, .today, .search{
+    .map, .logo, .today{
         display: none;
     }
     /*.calendar, .month{*/
@@ -688,8 +688,9 @@ footer a:last-child{
     .datepicker{
         margin: 10px auto;
     }
+
     .hidden-calendar:checked ~ .calendar_overlay{
-        position: absolute;
+        position: fixed;
         display: block;
         height: 100%;
         width: 100%;
@@ -707,6 +708,78 @@ footer a:last-child{
         padding: 3px;
         color: #fefefe;
         cursor: pointer;
+    }
+    .hidden-menu {
+        display: block;
+        position: fixed;
+        list-style:none;
+        padding: 10px;
+        margin: 0;
+        box-sizing: border-box;
+        width: 82%;
+        background-color: #71b36b;
+        height: 100%;
+        top: 0;
+        left: -82%;
+        z-index: 101;
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        border-right: 1px solid black;
+    }
+    .search{
+        position: fixed;
+        box-sizing: border-box;
+        top: 8%;
+        width: 80%;
+        margin-left: -80%;
+        z-index: 104;
+        transition: left .3s;
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+    }
+    .btn-menu {
+        color: #fff;
+        padding: 5px;
+        position: fixed;
+        top: 40px;
+        left: 5px;
+        cursor: pointer;
+        transition: left .23s;
+        z-index: 102;
+        width: 20%;
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+    }
+    .btn-menu span {
+        display: block;
+        height: 10px;
+        background-color: #fff;
+        margin: 10px 0 0;
+        transition: all .1s linear .23s;
+        position: relative;
+    }
+    .btn-menu span.first {
+        margin-top: 0;
+    }
+    .hidden-menu-ticker:checked ~ .btn-menu {
+        left: 70%;
+    }
+    .hidden-menu-ticker:checked ~ .hidden-menu {
+        left: 0;
+    }
+    .hidden-menu-ticker:checked ~ .search {
+        margin-left: 1%;
+    }
+    .hidden-menu-ticker:checked ~ .btn-menu span.first {
+        -webkit-transform: rotate(45deg);
+        top: 10px;
+    }
+    .hidden-menu-ticker:checked ~ .btn-menu span.second {
+        opacity: 0;
+    }
+    .hidden-menu-ticker:checked ~ .btn-menu span.third {
+        -webkit-transform: rotate(-45deg);
+        top: -10px;
     }
 }
 
