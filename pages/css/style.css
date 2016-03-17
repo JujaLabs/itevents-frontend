@@ -95,6 +95,9 @@ header{
 .over_logo .pin{
     margin-left: 480px;
 }
+.hidden-calendar, .close_calendar{
+display: none;
+}
 .calendar   {
     float: left;
     background-color: #555555;
@@ -175,7 +178,6 @@ header{
     width: 20px;
     margin: 6px;
     border: 2px solid #555555;
-    /*border: 2px solid red;*/
 }
 @media all and (-webkit-min-device-pixel-ratio:0) { .datepicker-td {
     margin-right: 10px;
@@ -240,7 +242,7 @@ header{
     bottom: 3px;
     border: 1px solid #242424;
 }
-input[type=checkbox]:checked + label:before {
+.checkbox input[type=checkbox]:checked + label:before {
     content: "\2022";
     color: #71b36b;
     font-size: 24px;
@@ -292,9 +294,6 @@ input[type=checkbox]:checked + label:before {
 .main_wrapper{
     width: 82%;
 }
-/*.hidden-calendar{*/
-    /*display: none;*/
-/*}*/
 .main_wrapper .date{
     margin-top: 140px;
     font: 16pt AvenirNextRegular;
@@ -377,7 +376,6 @@ article{
     height: 140px;
     border: 1px solid #242424;
     font: 14pt AvenirNextRegular;
-    /*padding-right: 16px;*/
 }
 article a{
     color: #333333;
@@ -667,18 +665,21 @@ footer a:last-child{
         margin: 10px 0;
         text-align: center;
     }
+    .main_wrapper .date span{
+        cursor: pointer;
+    }
 
     .calendar{
         position: fixed;
         top: 18%;
         left: 50%;
-        margin-left: -500px;
-        width: 90%;
+        margin-left: -600px;
+        width: 80%;
         height: 292px;
         z-index: 100;
     }
     .hidden-calendar:checked ~ .calendar{
-        margin-left: -169px;
+        margin-left: -160px;
     }
     .calendar .month{
         display: block;
@@ -687,13 +688,25 @@ footer a:last-child{
     .datepicker{
         margin: 10px auto;
     }
-    .test{
-        height: 100px;
-        width: 100px;
-        background-color: red;
+    .hidden-calendar:checked ~ .calendar_overlay{
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        opacity: 0.8;
+        z-index: 99;
+        background-color: black;
     }
-    #hidden-cal:checked ~ .test{
-        background-color: blue;
+    .close_calendar{
+        line-height: 100%;
+        display: block;
+        position: absolute;
+        top: -24px;
+        left: 320px;
+        z-index: 200;
+        padding: 3px;
+        color: #fefefe;
+        cursor: pointer;
     }
 }
 
