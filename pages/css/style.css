@@ -741,7 +741,7 @@ footer a:last-child{
         color: #fff;
         padding: 5px;
         position: fixed;
-        top: 40px;
+        top: 35px;
         left: 5px;
         cursor: pointer;
         transition: left .23s;
@@ -762,7 +762,8 @@ footer a:last-child{
         margin-top: 0;
     }
     .hidden-menu-ticker:checked ~ .btn-menu {
-        left: 70%;
+        top: 5px;
+        left: 58%;
     }
     .hidden-menu-ticker:checked ~ .hidden-menu {
         left: 0;
