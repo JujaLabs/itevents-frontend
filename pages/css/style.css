@@ -621,9 +621,6 @@ footer a:last-child{
     .map, .logo, .today{
         display: none;
     }
-    /*.calendar, .month{*/
-        /*height: 0;*/
-    /*}*/
     header, .main, footer{
         width: 400px;
     }
@@ -632,6 +629,7 @@ footer a:last-child{
     }
     header{
         height: 140px;
+        position: relative;
     }
     .login{
         height: 100%;
@@ -676,7 +674,7 @@ footer a:last-child{
         margin-left: -600px;
         width: 80%;
         height: 292px;
-        z-index: 100;
+        z-index: 102;
     }
     .hidden-calendar:checked ~ .calendar{
         margin-left: -160px;
@@ -695,7 +693,7 @@ footer a:last-child{
         height: 100%;
         width: 100%;
         opacity: 0.8;
-        z-index: 99;
+        z-index: 101;
         background-color: black;
     }
     .close_calendar{
@@ -729,7 +727,7 @@ footer a:last-child{
     .search{
         position: fixed;
         box-sizing: border-box;
-        top: 65px;
+        top: 140px;
         width: 80%;
         margin-left: -80%;
         z-index: 104;
@@ -740,12 +738,12 @@ footer a:last-child{
     .btn-menu {
         color: #fff;
         padding: 5px;
-        position: fixed;
+        position: absolute;
         top: 35px;
         left: 5px;
         cursor: pointer;
         transition: left .23s;
-        z-index: 98;
+        z-index: 100;
         width: 20%;
         -webkit-transform: translateZ(0);
         -webkit-backface-visibility: hidden;
@@ -762,8 +760,9 @@ footer a:last-child{
         margin-top: 0;
     }
     .hidden-menu-ticker:checked ~ .btn-menu {
-        top: 5px;
+        /*top: 5px;*/
         left: 58%;
+        z-index: 105;
     }
     .hidden-menu-ticker:checked ~ .hidden-menu {
         left: 0;
