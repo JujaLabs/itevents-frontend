@@ -118,16 +118,19 @@
 
                 <form action="/register" class="hidden_register_form">
                     <p><label for="hidden_login_form">Вход </label>/<label for="hidden_register_form"> Регистрация</label></p>
-                    <div class="wrapper_login_fields"><label>
-                        <input type="text" class="login_name" placeholder="Your login" required>
-                    </label>
-                    <label>
-                        <input type="password" class="login_password" placeholder="Password" required>
-                    </label>
+                    <div class="wrapper_login_fields">
+                        <label>
+                            <input type="text" class="login_name" placeholder="Your login" required>
+                        </label>
+                        <label>
+                            <input type="password" class="login_password" placeholder="Password" required><a href="#" class="forgot_password"></a>
+                        </label>
+
                     <input type="submit" class="button button_register" value="Зарегистрироваться"></div>
                 </form>
                 <!--<form action="/login" class="login_form"></form>-->
             </div>
+            <label for="hidden_register_form_off" class="login_overlay"></label>
         </div>
         <div class="search">
             <form class="form-search">

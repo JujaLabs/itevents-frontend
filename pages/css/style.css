@@ -272,9 +272,9 @@ header{
     margin-top: -75px;
     color: #ffffff;
 }
-/*.login_form_overlay, .hidden-login-form {*/
-    /*display: none;*/
-/*}*/
+.hidden-login-form {
+    display: none;
+}
 .login_form_wrapper{
     position: fixed;
     margin-left: -3000px;
@@ -292,6 +292,17 @@ header{
     background-size: auto 52px;
     background-position: 50% 82px;
     transition: left .3s;
+}
+#hidden_register_form:checked ~ .login_overlay, #hidden_login_form:checked ~ .login_overlay{
+    position: fixed;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 49;
+    background-color: black;
 }
 .login_form_wrapper p{
     position: static;
@@ -312,7 +323,20 @@ header{
     color: #fefefe;
     font: 14pt AvenirNextRegular;
 }
-.register_form, .login_form{
+.wrapper_login_fields label:last-of-type{
+    position: relative;
+}
+.forgot_password{
+    position: absolute;
+    height: 227.3%;
+    width: 18px;
+    /*top: 60%;*/
+    margin: 0 0 0 -9.569%;
+    background-image: url('../img/remind_password.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.hidden_register_form, .hidden_login_form{
     width: 95.31680441%;
     margin: 8px auto;
     border: 1px solid #eef6ee;
