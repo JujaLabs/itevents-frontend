@@ -264,7 +264,7 @@ header{
 .login label{
     cursor: pointer;
 }
-.login p{
+.login>p{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -275,15 +275,12 @@ header{
 .hidden-login-form {
     display: none;
 }
-.login_form_wrapper{
+.register_form_wrapper, .login_form_wrapper {
     position: fixed;
     margin-left: -3000px;
     margin-top: -238px;
     top: 50%;
     left: 50%;
-}
-#hidden_register_form:checked ~ .login_form_wrapper{
-    margin-left: -11.34%;
     width: 22.6875%;
     background-color: #71b36b;
     z-index: 50;
@@ -292,6 +289,12 @@ header{
     background-size: auto 52px;
     background-position: 50% 82px;
     transition: left .3s;
+}
+#hidden_login_form:checked ~ .login_form_wrapper {
+    margin-left: -11.34%;
+}
+#hidden_register_form:checked ~ .register_form_wrapper {
+    margin-left: -11.34%;
 }
 #hidden_register_form:checked ~ .login_overlay, #hidden_login_form:checked ~ .login_overlay{
     position: fixed;
@@ -304,14 +307,14 @@ header{
     z-index: 49;
     background-color: black;
 }
-.login_form_wrapper p{
+.login__signInOrSignUp{
     position: static;
-    margin: 0 auto;
     text-align: center;
     text-transform: uppercase;
-    margin-top: 163px;
+    margin: 163px auto 0;
+    color: #ffffff;
 }
-.login_form_wrapper input:not([type="submit"]){
+.login input:not([type="submit"]){
     border: 1px solid #eef6ee;
     overflow: hidden;
     height: 48px;
@@ -323,14 +326,21 @@ header{
     color: #fefefe;
     font: 14pt AvenirNextRegular;
 }
-.wrapper_login_fields label:last-of-type{
-    position: relative;
+.close_login_form{
+    line-height: 100%;
+    display: block;
+    position: absolute;
+    top: -5%;
+    left: 103%;
+    z-index: 200;
+    padding: 3px;
+    color: #fefefe;
+    cursor: pointer;
 }
 .forgot_password{
     position: absolute;
     height: 227.3%;
     width: 18px;
-    /*top: 60%;*/
     margin: 0 0 0 -9.569%;
     background-image: url('../img/remind_password.png');
     background-position: 50%;
@@ -345,7 +355,7 @@ header{
     width: 91.6%;
     margin: 27px auto 0;
 }
-.login_form_wrapper .button_register{
+.login .button_register{
     position: static;
     background-color: #f7941d;
     width: 100%;
